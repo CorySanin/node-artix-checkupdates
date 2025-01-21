@@ -1,6 +1,6 @@
 {
   "name": "artix-checkupdates",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nodejs wrapper for artix-checkupdates",
   "keywords": [
     "artix"
@@ -21,6 +21,9 @@
 	},
   "type": "module",
   "main": "./distribution/index.js",
+  "files": [
+    "distribution"
+  ],
   "devDependencies": {
     "@sindresorhus/tsconfig": "7.0.0",
     "@types/node": "22.10.7"
