@@ -1,0 +1,28 @@
+{
+  "name": "artix-checkupdates",
+  "version": "1.0.0",
+  "description": "nodejs wrapper for artix-checkupdates",
+  "keywords": [
+    "artix"
+  ],
+  "homepage": "https://github.com/CorySanin/node-artix-checkupdates#readme",
+  "bugs": {
+    "url": "https://github.com/CorySanin/node-artix-checkupdates/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorySanin/node-artix-checkupdates.git"
+  },
+  "license": "MIT",
+  "author": {
+		"name": "Cory Sanin",
+		"email": "corysanin@artixlinux.org",
+		"url": "https://sanin.dev"
+	},
+  "type": "module",
+  "main": "./distribution/index.js",
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "7.0.0",
+    "@types/node": "22.10.7"
+  }
+}

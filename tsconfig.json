@@ -1,0 +1,9 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true
+	},
+	"include": [
+		"src"
+	]
+}
