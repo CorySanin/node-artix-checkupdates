@@ -74,7 +74,7 @@ class Checkupdates {
 
     }
 
-    async checkupdates(flag: '-u' | '-m', applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
+    async checkupdates(flag: '-u' | '-m' | '-ml', applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
         return new Promise((resolve, reject) => {
             const process = spawn('artix-checkupdates', [flag]);
             const to = setTimeout(async () => {
@@ -110,6 +110,10 @@ class Checkupdates {
 
     fetchMovable(applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
         return this.checkupdates('-m', applyCompliance);
+    }
+
+    fetchLooseMovable(applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
+        return this.checkupdates('-ml', applyCompliance);
     }
 }
 
