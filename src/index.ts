@@ -1,4 +1,4 @@
-import { spawn } from 'child_process';
+import { spawn } from 'spawn-but-with-promises';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
@@ -75,33 +75,30 @@ class Checkupdates {
     }
 
     async checkupdates(flag: '-u' | '-m' | '-ml', applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
-        return new Promise((resolve, reject) => {
-            const process = spawn('artix-checkupdates', [flag]);
-            const to = setTimeout(async () => {
-                process.kill() && await this.cleanUpLockfiles();
-                reject('Timed out');
-            }, this._timeout);
-            let outputstr = '';
-            let errorOutput = '';
-            process.stdout.on('data', data => {
-                outputstr += data.toString();
-            });
-            process.stderr.on('data', err => {
-                const errstr = err.toString();
-                errorOutput += `${errstr}, `;
-                console.error(errstr);
-            })
-            process.on('exit', async (code) => {
-                clearTimeout(to);
-                if (code !== 0 || errorOutput.length !== 0) {
-                    errorOutput.includes('unable to lock database') && this.cleanUpLockfiles();
-                    reject((code && `exited with ${code}`) || errorOutput);
-                }
-                else {
-                    resolve(this.parseCheckUpdatesOutput(outputstr, applyCompliance));
-                }
-            });
+        const process = spawn('artix-checkupdates', [flag]);
+        const to = setTimeout(async () => {
+            process.kill() && await this.cleanUpLockfiles();
+            throw new Error('Timed out');
+        }, this._timeout);
+        let outputstr = '';
+        let errorOutput = '';
+        process.stdout.on('data', data => {
+            outputstr += data.toString();
         });
+        process.stderr.on('data', err => {
+            const errstr = err.toString();
+            errorOutput += `${errstr}, `;
+            console.error(errstr);
+        });
+        const code = await process;
+        clearTimeout(to);
+        if (code !== 0 || errorOutput.length !== 0) {
+            errorOutput.includes('unable to lock database') && this.cleanUpLockfiles();
+            throw new Error((code && `exited with ${code}`) || errorOutput)
+        }
+        else {
+            return this.parseCheckUpdatesOutput(outputstr, applyCompliance);
+        }
     }
 
     fetchUpgradable(applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {

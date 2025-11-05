@@ -1,4 +1,4 @@
-# node-artix-checkupdates
+# artix-checkupdates
 
 node library to interface with [artix-checkupdates](https://packages.artixlinux.org/packages/world/x86_64/artix-checkupdates/).
 
