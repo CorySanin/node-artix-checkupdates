@@ -1,6 +1,6 @@
 {
   "name": "artix-checkupdates",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "nodejs wrapper for artix-checkupdates",
   "keywords": [
     "artix",
@@ -21,7 +21,6 @@
     "url": "https://sanin.dev/"
   },
   "type": "module",
-  "types": "./distribution/src/index.d.ts",
   "exports": {
     ".": {
       "types": "./distribution/src/index.d.ts",
@@ -29,10 +28,17 @@
     }
   },
   "main": "./distribution/src/index.js",
+  "types": "./distribution/src/index.d.ts",
   "files": [
     "distribution"
   ],
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "rm -rf ./distribution",
+    "watch": "npx tsc -w"
+  },
   "dependencies": {
+    "delay": "^7.0.0",
     "spawn-but-with-promises": "^1.0.4"
   },
   "devDependencies": {

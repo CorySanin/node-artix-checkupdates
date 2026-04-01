@@ -1,4 +1,5 @@
 import { spawn } from 'spawn-but-with-promises';
+import delay from 'delay';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
@@ -17,6 +18,7 @@ const NAMECOMPLIANCE = [
 
 export type ArtixRepo = 'system' | 'system-gremlins' | 'system-goblins' | 'world' | 'world-gremlins' | 'world-goblins' | 'galaxy' | 'galaxy-gremlins' | 'galaxy-goblins' | 'lib32' | 'lib32-gremlins' | 'lib32-goblins';
 export type ArchRepo = 'core' | 'core-testing' | 'core-staging' | 'extra' | 'extra-testing' | 'extra-staging' | 'multilib' | 'multilib-testing' | 'multilib-staging';
+export type ValidFlag = '-u' | '-m' | '-ml';
 
 export interface CheckupdatesOptions {
     timeout?: number;
@@ -74,7 +76,7 @@ export class Checkupdates {
 
     }
 
-    async checkupdates(flag: '-u' | '-m' | '-ml', applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
+    async checkupdates(flag: ValidFlag, applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
         const process = spawn('artix-checkupdates', [flag]);
         const to = setTimeout(async () => {
             process.kill() && await this.cleanUpLockfiles();
@@ -101,16 +103,29 @@ export class Checkupdates {
         }
     }
 
-    fetchUpgradable(applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
-        return this.checkupdates('-u', applyCompliance);
+    async retryCheckupdates(flag: ValidFlag, applyCompliance: boolean = false, retries: number = 1, pause:number = 2300): Promise<CheckupdatesResult[]> {
+        let tries = 0;
+        while (retries > tries++) {
+            try {
+                return this.checkupdates(flag, applyCompliance);
+            }
+            catch {
+                await delay(pause);
+            }
+        }
+        return this.checkupdates(flag, applyCompliance);
     }
 
-    fetchMovable(applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
-        return this.checkupdates('-m', applyCompliance);
+    fetchUpgradable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+        return this.retryCheckupdates('-u', applyCompliance, retries);
     }
 
-    fetchLooseMovable(applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
-        return this.checkupdates('-ml', applyCompliance);
+    fetchMovable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+        return this.retryCheckupdates('-m', applyCompliance, retries);
+    }
+
+    fetchLooseMovable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+        return this.retryCheckupdates('-ml', applyCompliance, retries);
     }
 }
 
