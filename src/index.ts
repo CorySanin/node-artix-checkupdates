@@ -15,14 +15,14 @@ const NAMECOMPLIANCE = [
     (p: string): string => p.replace(/[_\-]{2,}/g, "-")
 ]
 
-type ArtixRepo = 'system' | 'system-gremlins' | 'system-goblins' | 'world' | 'world-gremlins' | 'world-goblins' | 'galaxy' | 'galaxy-gremlins' | 'galaxy-goblins' | 'lib32' | 'lib32-gremlins' | 'lib32-goblins';
-type ArchRepo = 'core' | 'core-testing' | 'core-staging' | 'extra' | 'extra-testing' | 'extra-staging' | 'multilib' | 'multilib-testing' | 'multilib-staging';
+export type ArtixRepo = 'system' | 'system-gremlins' | 'system-goblins' | 'world' | 'world-gremlins' | 'world-goblins' | 'galaxy' | 'galaxy-gremlins' | 'galaxy-goblins' | 'lib32' | 'lib32-gremlins' | 'lib32-goblins';
+export type ArchRepo = 'core' | 'core-testing' | 'core-staging' | 'extra' | 'extra-testing' | 'extra-staging' | 'multilib' | 'multilib-testing' | 'multilib-staging';
 
-interface CheckupdatesOptions {
+export interface CheckupdatesOptions {
     timeout?: number;
 }
 
-interface CheckupdatesResult {
+export interface CheckupdatesResult {
     basename: string;
     artixRepo: ArtixRepo;
     artixVersion: string;
@@ -31,7 +31,7 @@ interface CheckupdatesResult {
     packager: string;
 }
 
-class Checkupdates {
+export class Checkupdates {
     private _timeout: number;
 
     constructor(options: CheckupdatesOptions = {}) {
@@ -115,5 +115,3 @@ class Checkupdates {
 }
 
 export default Checkupdates;
-export { Checkupdates };
-export type { CheckupdatesOptions, CheckupdatesResult, ArtixRepo, ArchRepo };

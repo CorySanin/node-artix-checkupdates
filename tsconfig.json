@@ -1,9 +1,11 @@
 {
-	"extends": "@sindresorhus/tsconfig",
-	"compilerOptions": {
-		"exactOptionalPropertyTypes": true
-	},
-	"include": [
-		"src"
-	]
+  "extends": "@sindresorhus/tsconfig",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "strict": false,
+    "rootDir": "./",
+    "types": ["node"]
+  },
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["**/*.spec.ts"],
 }
