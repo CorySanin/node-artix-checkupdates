@@ -33,9 +33,9 @@
     "distribution"
   ],
   "scripts": {
-    "build": "npx tsc",
+    "build": "tsc",
     "clean": "rm -rf ./distribution",
-    "watch": "npx tsc -w"
+    "watch": "tsc -w"
   },
   "dependencies": {
     "delay": "^7.0.0",
@@ -45,5 +45,6 @@
     "@sindresorhus/tsconfig": "8.1.0",
     "@types/node": "25.5.0",
     "typescript": "6.0.2"
-  }
+  },
+  "packageManager": "pnpm@10.33.0"
 }
