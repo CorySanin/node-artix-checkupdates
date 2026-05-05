@@ -18,7 +18,7 @@ const NAMECOMPLIANCE = [
 
 export type ArtixRepo = 'system' | 'system-gremlins' | 'system-goblins' | 'world' | 'world-gremlins' | 'world-goblins' | 'galaxy' | 'galaxy-gremlins' | 'galaxy-goblins' | 'lib32' | 'lib32-gremlins' | 'lib32-goblins';
 export type ArchRepo = 'core' | 'core-testing' | 'core-staging' | 'extra' | 'extra-testing' | 'extra-staging' | 'multilib' | 'multilib-testing' | 'multilib-staging';
-export type ValidFlag = '-u' | '-m' | '-ml';
+export type ValidFlag = '-u' | '-m' | '-ml' | '-a' | '-d';
 
 export interface CheckupdatesOptions {
     timeout?: number;
@@ -120,12 +120,20 @@ export class Checkupdates {
         return this.retryCheckupdates('-u', applyCompliance, retries);
     }
 
+    fetchDowngrades(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+        return this.retryCheckupdates('-d', applyCompliance, retries);
+    }
+
     fetchMovable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
         return this.retryCheckupdates('-m', applyCompliance, retries);
     }
 
     fetchLooseMovable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
         return this.retryCheckupdates('-ml', applyCompliance, retries);
+    }
+
+    fetchArtixOnly(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+        return this.retryCheckupdates('-a', applyCompliance, retries);
     }
 }
 
