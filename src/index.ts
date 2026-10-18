@@ -49,11 +49,11 @@ export class Checkupdates {
         }
     }
 
-    applyCompliance(str: string): string {
+    applyCompliance(str: string) {
         return NAMECOMPLIANCE.reduce((s: string, fn): string => fn(s), str);
     }
 
-    private parseCheckUpdatesOutput(output: string, applyCompliance: boolean = false): CheckupdatesResult[] {
+    private parseCheckUpdatesOutput(output: string, applyCompliance: boolean = false) {
         const packages: CheckupdatesResult[] = [];
         const lines = output.split('\n');
         lines.forEach(l => {
@@ -73,10 +73,9 @@ export class Checkupdates {
             }
         });
         return packages;
-
     }
 
-    async checkupdates(flag: ValidFlag, applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
+    private async checkupdates(flag: ValidFlag, applyCompliance: boolean = false) {
         const process = spawn('artix-checkupdates', [flag]);
         const outputstr: string[] = [];
         const errorOutput: string[] = [];
@@ -104,36 +103,37 @@ export class Checkupdates {
         return this.parseCheckUpdatesOutput(outputstr.join(''), applyCompliance);
     }
 
-    async retryCheckupdates(flag: ValidFlag, applyCompliance: boolean = false, retries: number = 1, pause: number = 2300): Promise<CheckupdatesResult[]> {
+    private async retryCheckupdates(flag: ValidFlag, applyCompliance: boolean = false, retries: number = 1, pause: number = 2300) {
         let tries = 0;
         while (retries > tries++) {
             try {
-                return this.checkupdates(flag, applyCompliance);
+                return await this.checkupdates(flag, applyCompliance);
             }
             catch {
+                console.error(`artix-checkupdates failed ${tries} time(s). Retrying...`);
                 await setTimeout(pause);
             }
         }
-        return this.checkupdates(flag, applyCompliance);
+        return await this.checkupdates(flag, applyCompliance);
     }
 
-    fetchUpgradable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+    fetchUpgradable(applyCompliance: boolean = false, retries: number = 0) {
         return this.retryCheckupdates('-u', applyCompliance, retries);
     }
 
-    fetchDowngrades(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+    fetchDowngrades(applyCompliance: boolean = false, retries: number = 0) {
         return this.retryCheckupdates('-d', applyCompliance, retries);
     }
 
-    fetchMovable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+    fetchMovable(applyCompliance: boolean = false, retries: number = 0) {
         return this.retryCheckupdates('-m', applyCompliance, retries);
     }
 
-    fetchLooseMovable(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+    fetchLooseMovable(applyCompliance: boolean = false, retries: number = 0) {
         return this.retryCheckupdates('-ml', applyCompliance, retries);
     }
 
-    fetchArtixOnly(applyCompliance: boolean = false, retries: number = 0): Promise<CheckupdatesResult[]> {
+    fetchArtixOnly(applyCompliance: boolean = false, retries: number = 0) {
         return this.retryCheckupdates('-a', applyCompliance, retries);
     }
 }
