@@ -35,7 +35,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf ./distribution",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "test": "vitest"
   },
   "dependencies": {
     "spawn-but-with-promises": "^1.0.4"
@@ -43,9 +44,11 @@
   "devDependencies": {
     "@sindresorhus/tsconfig": "8.1.0",
     "@types/node": "26.6.5",
-    "typescript": "7.0.2"
+    "@vitest/coverage-v8": "^5.0.5",
+    "typescript": "7.0.2",
+    "vitest": "^5.0.5"
   },
-    "devEngines": {
+  "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "^12.14.0",

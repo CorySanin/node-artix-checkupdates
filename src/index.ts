@@ -33,6 +33,10 @@ export interface CheckupdatesResult {
     packager: string;
 }
 
+export function applyCompliance(str: string) {
+    return NAMECOMPLIANCE.reduce((s: string, fn): string => fn(s), str);
+}
+
 export class Checkupdates {
     private _timeout: number;
 
@@ -49,11 +53,7 @@ export class Checkupdates {
         }
     }
 
-    applyCompliance(str: string) {
-        return NAMECOMPLIANCE.reduce((s: string, fn): string => fn(s), str);
-    }
-
-    private parseCheckUpdatesOutput(output: string, applyCompliance: boolean = false) {
+    private parseCheckUpdatesOutput(output: string, doApplyCompliance: boolean = false) {
         const packages: CheckupdatesResult[] = [];
         const lines = output.split('\n');
         lines.forEach(l => {
@@ -63,7 +63,7 @@ export class Checkupdates {
                 const cols = reservethis.split(' ');
                 const basename = cols[0] || '';
                 packages.push({
-                    basename: applyCompliance ? this.applyCompliance(basename) : basename,
+                    basename: doApplyCompliance ? applyCompliance(basename) : basename,
                     artixRepo: cols[1] as ArtixRepo,
                     artixVersion: cols[2] || '',
                     archRepo: cols[3] as ArchRepo,
@@ -75,7 +75,7 @@ export class Checkupdates {
         return packages;
     }
 
-    private async checkupdates(flag: ValidFlag, applyCompliance: boolean = false) {
+    private async checkupdates(flag: ValidFlag, doApplyCompliance: boolean = false) {
         const process = spawn('artix-checkupdates', [flag]);
         const outputstr: string[] = [];
         const errorOutput: string[] = [];
@@ -100,41 +100,41 @@ export class Checkupdates {
         else if (process.exitCode !== 0) {
             throw new Error(`artix-checkupdates returned exit code ${process.exitCode}`);
         }
-        return this.parseCheckUpdatesOutput(outputstr.join(''), applyCompliance);
+        return this.parseCheckUpdatesOutput(outputstr.join(''), doApplyCompliance);
     }
 
-    private async retryCheckupdates(flag: ValidFlag, applyCompliance: boolean = false, retries: number = 1, pause: number = 2300) {
+    private async retryCheckupdates(flag: ValidFlag, doApplyCompliance: boolean = false, retries: number = 1, pause: number = 2300) {
         let tries = 0;
         while (retries > tries++) {
             try {
-                return await this.checkupdates(flag, applyCompliance);
+                return await this.checkupdates(flag, doApplyCompliance);
             }
             catch {
                 console.error(`artix-checkupdates failed ${tries} time(s). Retrying...`);
                 await setTimeout(pause);
             }
         }
-        return await this.checkupdates(flag, applyCompliance);
+        return await this.checkupdates(flag, doApplyCompliance);
     }
 
-    fetchUpgradable(applyCompliance: boolean = false, retries: number = 0) {
-        return this.retryCheckupdates('-u', applyCompliance, retries);
+    fetchUpgradable(doApplyCompliance: boolean = false, retries: number = 0) {
+        return this.retryCheckupdates('-u', doApplyCompliance, retries);
     }
 
-    fetchDowngrades(applyCompliance: boolean = false, retries: number = 0) {
-        return this.retryCheckupdates('-d', applyCompliance, retries);
+    fetchDowngrades(doApplyCompliance: boolean = false, retries: number = 0) {
+        return this.retryCheckupdates('-d', doApplyCompliance, retries);
     }
 
-    fetchMovable(applyCompliance: boolean = false, retries: number = 0) {
-        return this.retryCheckupdates('-m', applyCompliance, retries);
+    fetchMovable(doApplyCompliance: boolean = false, retries: number = 0) {
+        return this.retryCheckupdates('-m', doApplyCompliance, retries);
     }
 
-    fetchLooseMovable(applyCompliance: boolean = false, retries: number = 0) {
-        return this.retryCheckupdates('-ml', applyCompliance, retries);
+    fetchLooseMovable(doApplyCompliance: boolean = false, retries: number = 0) {
+        return this.retryCheckupdates('-ml', doApplyCompliance, retries);
     }
 
-    fetchArtixOnly(applyCompliance: boolean = false, retries: number = 0) {
-        return this.retryCheckupdates('-a', applyCompliance, retries);
+    fetchArtixOnly(doApplyCompliance: boolean = false, retries: number = 0) {
+        return this.retryCheckupdates('-a', doApplyCompliance, retries);
     }
 }
 
