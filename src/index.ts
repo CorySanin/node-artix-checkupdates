@@ -1,5 +1,5 @@
 import { spawn } from 'spawn-but-with-promises';
-import delay from 'delay';
+import { setTimeout } from 'node:timers/promises'
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
@@ -53,7 +53,7 @@ export class Checkupdates {
         return NAMECOMPLIANCE.reduce((s: string, fn): string => fn(s), str);
     }
 
-    parseCheckUpdatesOutput(output: string, applyCompliance: boolean = false): CheckupdatesResult[] {
+    private parseCheckUpdatesOutput(output: string, applyCompliance: boolean = false): CheckupdatesResult[] {
         const packages: CheckupdatesResult[] = [];
         const lines = output.split('\n');
         lines.forEach(l => {
@@ -78,39 +78,40 @@ export class Checkupdates {
 
     async checkupdates(flag: ValidFlag, applyCompliance: boolean = false): Promise<CheckupdatesResult[]> {
         const process = spawn('artix-checkupdates', [flag]);
-        const to = setTimeout(async () => {
-            process.kill() && await this.cleanUpLockfiles();
-            throw new Error('Timed out');
-        }, this._timeout);
-        let outputstr = '';
-        let errorOutput = '';
+        const outputstr: string[] = [];
+        const errorOutput: string[] = [];
         process.stdout.on('data', data => {
-            outputstr += data.toString();
+            outputstr.push(data.toString());
         });
         process.stderr.on('data', err => {
             const errstr = err.toString();
-            errorOutput += `${errstr}, `;
+            errorOutput.push(errstr);
             console.error(errstr);
         });
-        const code = await process;
-        clearTimeout(to);
-        if (code !== 0 || errorOutput.length !== 0) {
+
+        await Promise.race([setTimeout(this._timeout), process]);
+        if (process.exitCode === null) {
+            process.kill();
+            throw new Error(`prepare timed out after ${this._timeout}ms`);
+        }
+        else if (errorOutput.length !== 0) {
             errorOutput.includes('unable to lock database') && this.cleanUpLockfiles();
-            throw new Error((code && `exited with ${code}`) || errorOutput)
+            throw new Error(errorOutput.join(', '));
         }
-        else {
-            return this.parseCheckUpdatesOutput(outputstr, applyCompliance);
+        else if (process.exitCode !== 0) {
+            throw new Error(`artix-checkupdates returned exit code ${process.exitCode}`);
         }
+        return this.parseCheckUpdatesOutput(outputstr.join(''), applyCompliance);
     }
 
-    async retryCheckupdates(flag: ValidFlag, applyCompliance: boolean = false, retries: number = 1, pause:number = 2300): Promise<CheckupdatesResult[]> {
+    async retryCheckupdates(flag: ValidFlag, applyCompliance: boolean = false, retries: number = 1, pause: number = 2300): Promise<CheckupdatesResult[]> {
         let tries = 0;
         while (retries > tries++) {
             try {
                 return this.checkupdates(flag, applyCompliance);
             }
             catch {
-                await delay(pause);
+                await setTimeout(pause);
             }
         }
         return this.checkupdates(flag, applyCompliance);
