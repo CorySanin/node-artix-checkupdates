@@ -1,0 +1,18 @@
+[
+  {
+    "archRepo": "extra",
+    "archVersion": "8.9.0-3",
+    "artixRepo": "world",
+    "artixVersion": "8.9.0-2",
+    "basename": "cryptoplusplus",
+    "packager": "sum--1"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.0.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.1.0-1",
+    "basename": "a-b",
+    "packager": "guy"
+  }
+]

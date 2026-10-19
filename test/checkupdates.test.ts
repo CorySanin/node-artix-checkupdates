@@ -184,4 +184,92 @@ describe('Checkupdates wrapper', () => {
         expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[params.func]]);
         expect(fakeSpawn.wasKilled()).toBe(true);
     });
+
+    it.each`
+            func                | exit
+            ${FN_ARTIX_ONLY}    | ${1}
+            ${FN_DOWNGRADES}    | ${22}
+            ${FN_MOVABLE}       | ${255}
+            ${FN_LOOSE_MOVABLE} | ${37}
+            ${FN_UPGRADABLE}    | ${55}
+        `('throws an error if child process exits with code $exit when fetching $func', async (params: { func: FunctionName, exit: number }) => {
+        const fakeSpawn = new FakeSpawn();
+        vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
+        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout()).getPromise());
+
+        const result = callFetch({ funcName: params.func });
+
+        fakeSpawn.resolvePromise(params.exit);
+
+        await expect(result).rejects.toThrow(`artix-checkupdates returned exit code ${params.exit}`);
+        expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[params.func]]);
+        expect(fakeSpawn.wasKilled()).toBe(false);
+    });
+
+    it.each`
+            func                | stderr
+            ${FN_ARTIX_ONLY}    | ${'ERROR'}
+            ${FN_DOWNGRADES}    | ${'Ouch!'}
+            ${FN_MOVABLE}       | ${'something went wrong'}
+            ${FN_LOOSE_MOVABLE} | ${'oh no!'}
+            ${FN_UPGRADABLE}    | ${'ope, that\'s not right'}
+        `('throws an error if child process writes to stderr when fetching $func', async (params: { func: FunctionName, stderr: string }) => {
+        const fakeSpawn = new FakeSpawn();
+        vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
+        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout()).getPromise());
+
+        const result = callFetch({ funcName: params.func });
+
+        fakeSpawn.emitStderr(params.stderr);
+        fakeSpawn.resolvePromise(0);
+
+        await expect(result).rejects.toThrow(params.stderr);
+        expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[params.func]]);
+        expect(fakeSpawn.wasKilled()).toBe(false);
+    });
+
+    it('retries on failure', async () => {
+        const {setTimeout: setTO} = await vi.importActual<typeof import('node:timers/promises')>('node:timers/promises');
+        const input = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'real.json'), { encoding: 'utf-8' })) as string[];
+        const expected = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'real.parsed.json'), { encoding: 'utf-8' })) as string[];
+        const errSpawn = new FakeSpawn();
+        const successSpawn = new FakeSpawn();
+        const timeoutToResolve = new FakeTimeout();
+        const timeouts = [new FakeTimeout(), timeoutToResolve, new FakeTimeout()];
+        vi.mocked(spawn).mockReturnValueOnce(errSpawn.getProc()).mockReturnValueOnce(successSpawn.getProc());
+        timeouts.forEach(ttl => vi.mocked(setTimeout).mockReturnValueOnce(ttl.getPromise()));
+
+        const result = callFetch({ funcName: FN_UPGRADABLE, retries: 5 });
+
+        errSpawn.resolvePromise(1);
+        timeoutToResolve.resolvePromise();
+        await setTO(50);
+        input.forEach(data => {
+            successSpawn.emitStdout(data);
+        });
+        successSpawn.resolvePromise(0);
+
+        await expect(result).resolves.toStrictEqual(expected);
+        expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[FN_UPGRADABLE]]);
+        expect(errSpawn.wasKilled()).toBe(false);
+        expect(successSpawn.wasKilled()).toBe(false);
+    });
+
+    it('can return url-compliant package names', async () => {
+        const input = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'noncompliant.json'), { encoding: 'utf-8' })) as string[];
+        const expected = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'noncompliant.parsed.json'), { encoding: 'utf-8' })) as string[];
+        const fakeSpawn = new FakeSpawn();
+        vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
+        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout).getPromise());
+
+        const result = callFetch({ funcName: FN_UPGRADABLE, doApplyCompliance: true });
+
+        input.forEach(data => {
+            fakeSpawn.emitStdout(data);
+        });
+        fakeSpawn.resolvePromise(0);
+        await expect(result).resolves.toStrictEqual(expected);
+        expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[FN_UPGRADABLE]]);
+        expect(fakeSpawn.wasKilled()).toBe(false);
+    });
 });

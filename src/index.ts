@@ -1,13 +1,12 @@
 import { spawn } from 'spawn-but-with-promises';
 import { setTimeout } from 'node:timers/promises'
-import * as fs from 'fs';
+import fsp from 'fs/promises';
 import * as path from 'path';
 import * as os from 'os';
 
 const TIMEOUT = 600000;
 const EXTRASPACE = new RegExp('\\s+', 'g');
 const CHECKUPDATESCACHE = path.join(os.homedir(), '.cache', 'artix-checkupdates');
-const fsp = fs.promises;
 
 const NAMECOMPLIANCE = [
     (p: string): string => p.replace(/([a-zA-Z0-9]+)\+([a-zA-Z]+)/g, '$1-$2'),
@@ -61,14 +60,14 @@ export class Checkupdates {
             const reservethis = l.trim().replace(EXTRASPACE, ' ');
             if (reservethis.length > 0 && reservethis.indexOf('Package basename') < 0) {
                 const cols = reservethis.split(' ');
-                const basename = cols[0] || '';
+                const basename = cols[0];
                 packages.push({
                     basename: doApplyCompliance ? applyCompliance(basename) : basename,
                     artixRepo: cols[1] as ArtixRepo,
-                    artixVersion: cols[2] || '',
+                    artixVersion: cols[2],
                     archRepo: cols[3] as ArchRepo,
                     archVersion: cols[4] as ArchRepo,
-                    packager: cols[5] || ''
+                    packager: cols[5]
                 });
             }
         });
