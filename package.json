@@ -1,6 +1,6 @@
 {
   "name": "artix-checkupdates",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "nodejs wrapper for artix-checkupdates",
   "keywords": [
     "artix",
@@ -30,7 +30,8 @@
   "main": "./distribution/src/index.js",
   "types": "./distribution/src/index.d.ts",
   "files": [
-    "distribution"
+    "distribution",
+    "!distribution/**/*.js.map"
   ],
   "scripts": {
     "build": "tsc && rm -rf distribution/test",

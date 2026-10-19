@@ -34,6 +34,7 @@ class FakeSpawn {
         proc.stderr = this._stdErr = new EventEmitter();
         proc.kill = () => {
             this._killed = true;
+            this.resolvePromise(1);
         };
         this._proc = proc as any;
     }
@@ -162,7 +163,6 @@ describe('Checkupdates wrapper', () => {
 
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakePromise).getPromise());
 
         const result = callFetch({ funcName: params.func });
 
@@ -177,24 +177,21 @@ describe('Checkupdates wrapper', () => {
 
     it.each`
             func                | timeout
-            ${FN_ARTIX_ONLY}    | ${600000}
-            ${FN_DOWNGRADES}    | ${300000}
-            ${FN_MOVABLE}       | ${123456}
-            ${FN_LOOSE_MOVABLE} | ${1001}
-            ${FN_UPGRADABLE}    | ${9825}
-        `('throws an error if timeout resolves when calling $func', async (params: { func: FunctionName, timeout: number }) => {
-        const fakeTimeout = new FakePromise();
+            ${FN_ARTIX_ONLY}    | ${10}
+            ${FN_DOWNGRADES}    | ${20}
+            ${FN_MOVABLE}       | ${15}
+            ${FN_LOOSE_MOVABLE} | ${5}
+            ${FN_UPGRADABLE}    | ${1}
+        `('throws an error if timeout is exceeded while calling $func', async (params: { func: FunctionName, timeout: number }) => {
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue(fakeTimeout.getPromise());
 
         const result = callFetch({
             funcName: params.func,
-            timeout: params.timeout === 600000 ? undefined : params.timeout
+            timeout: params.timeout
         });
 
-        fakeTimeout.resolvePromise();
-        await expect(result).rejects.toThrow(`artix-checkupdates timed out after ${params.timeout}ms`);
+        await expect(result).rejects.toThrow(`artix-checkupdates returned exit code 1`);
         expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[params.func]]);
         expect(fakeSpawn.wasKilled()).toBe(true);
     });
@@ -209,7 +206,6 @@ describe('Checkupdates wrapper', () => {
         `('throws an error if child process exits with code $exit when fetching $func', async (params: { func: FunctionName, exit: number }) => {
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakePromise()).getPromise());
 
         const result = callFetch({ funcName: params.func });
 
@@ -230,7 +226,6 @@ describe('Checkupdates wrapper', () => {
         `('throws an error if child process writes to stderr when fetching $func', async (params: { func: FunctionName, stderr: string }) => {
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakePromise()).getPromise());
 
         const result = callFetch({ funcName: params.func });
 
@@ -249,9 +244,8 @@ describe('Checkupdates wrapper', () => {
         const errSpawn = new FakeSpawn();
         const successSpawn = new FakeSpawn();
         const timeoutToResolve = new FakePromise();
-        const timeouts = [new FakePromise(), timeoutToResolve, new FakePromise()];
         vi.mocked(spawn).mockReturnValueOnce(errSpawn.getProc()).mockReturnValueOnce(successSpawn.getProc());
-        timeouts.forEach(ttl => vi.mocked(setTimeout).mockReturnValueOnce(ttl.getPromise()));
+        vi.mocked(setTimeout).mockReturnValueOnce(timeoutToResolve.getPromise());
 
         const result = callFetch({ funcName: FN_UPGRADABLE, retries: 5 });
 
@@ -274,7 +268,6 @@ describe('Checkupdates wrapper', () => {
         const expected = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'noncompliant.parsed.json'), { encoding: 'utf-8' })) as string[];
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakePromise).getPromise());
 
         const result = callFetch({ funcName: FN_UPGRADABLE, doApplyCompliance: true });
 

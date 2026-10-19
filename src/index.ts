@@ -1,5 +1,5 @@
 import { spawn } from 'spawn-but-with-promises';
-import { setTimeout } from 'node:timers/promises'
+import { setTimeout as setTimeoutP } from 'node:timers/promises'
 import { rm } from 'fs/promises';
 import path from 'path';
 import os from 'os';
@@ -76,6 +76,9 @@ export class Checkupdates {
 
     private async checkupdates(flag: ValidFlag, doApplyCompliance: boolean = false) {
         const process = spawn('artix-checkupdates', [flag]);
+        const to = setTimeout(async () => {
+            process.kill() && await this.cleanUpLockfiles();
+        }, this._timeout);
         const outputstr: string[] = [];
         const errorOutput: string[] = [];
         process.stdout.on('data', data => {
@@ -86,13 +89,9 @@ export class Checkupdates {
             errorOutput.push(errstr);
             console.error(errstr);
         });
-
-        await Promise.race([setTimeout(this._timeout), process]);
-        if (process.exitCode === null) {
-            process.kill();
-            throw new Error(`artix-checkupdates timed out after ${this._timeout}ms`);
-        }
-        else if (errorOutput.length !== 0) {
+        await process;
+        clearTimeout(to);
+        if (errorOutput.length !== 0) {
             errorOutput.includes('unable to lock database') && await this.cleanUpLockfiles();
             throw new Error(errorOutput.join(', '));
         }
@@ -110,7 +109,7 @@ export class Checkupdates {
             }
             catch {
                 console.error(`artix-checkupdates failed ${tries} time(s). Retrying...`);
-                await setTimeout(pause);
+                await setTimeoutP(pause);
             }
         }
         return await this.checkupdates(flag, doApplyCompliance);
