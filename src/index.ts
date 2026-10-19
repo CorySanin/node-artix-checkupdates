@@ -1,8 +1,8 @@
 import { spawn } from 'spawn-but-with-promises';
 import { setTimeout } from 'node:timers/promises'
-import fsp from 'fs/promises';
-import * as path from 'path';
-import * as os from 'os';
+import { rm } from 'fs/promises';
+import path from 'path';
+import os from 'os';
 
 const TIMEOUT = 600000;
 const EXTRASPACE = new RegExp('\\s+', 'g');
@@ -45,7 +45,7 @@ export class Checkupdates {
 
     async cleanUpLockfiles() {
         try {
-            await fsp.rm(CHECKUPDATESCACHE, { recursive: true, force: true });
+            await rm(CHECKUPDATESCACHE, { recursive: true, force: true });
         }
         catch (ex) {
             console.error('Failed to remove the artix-checkupdates cache directory:', ex);
@@ -93,7 +93,7 @@ export class Checkupdates {
             throw new Error(`artix-checkupdates timed out after ${this._timeout}ms`);
         }
         else if (errorOutput.length !== 0) {
-            errorOutput.includes('unable to lock database') && this.cleanUpLockfiles();
+            errorOutput.includes('unable to lock database') && await this.cleanUpLockfiles();
             throw new Error(errorOutput.join(', '));
         }
         else if (process.exitCode !== 0) {

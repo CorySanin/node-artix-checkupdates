@@ -1,5 +1,7 @@
-import fsp from 'fs/promises';
+import { rm } from 'fs/promises';
+import { promises as fsp } from 'fs';
 import { join } from 'path';
+import { homedir } from 'os';
 import { setTimeout } from 'node:timers/promises';
 import { EventEmitter } from 'node:events';
 import { afterEach, describe, expect, it, vi } from 'vitest';
@@ -65,12 +67,14 @@ class FakeSpawn {
     }
 }
 
-class FakeTimeout {
+class FakePromise<T> {
     private _resolvePromise: () => void;
+    private _rejectPromise: (val: T) => void;
     private _promise: Promise<void>;
     constructor() {
-        this._promise = new Promise((resolve) => {
+        this._promise = new Promise((resolve, reject) => {
             this._resolvePromise = resolve;
+            this._rejectPromise = reject;
         });
     }
 
@@ -80,6 +84,10 @@ class FakeTimeout {
 
     resolvePromise() {
         this._resolvePromise();
+    }
+
+    rejectPromise(val: T) {
+        this._rejectPromise(val);
     }
 }
 
@@ -105,7 +113,11 @@ vi.mock(import('spawn-but-with-promises'), () => ({
 
 vi.mock(import('node:timers/promises'), () => ({
     setTimeout: vi.fn()
-}))
+}));
+
+vi.mock(import('fs/promises'), () => ({
+    rm: vi.fn()
+}));
 
 function callFetch(params: { funcName: FunctionName, doApplyCompliance?: boolean, retries?: number, timeout?: number }) {
     const doApplyCompliance = params.doApplyCompliance ?? false;
@@ -130,9 +142,11 @@ function callFetch(params: { funcName: FunctionName, doApplyCompliance?: boolean
 }
 
 describe('Checkupdates wrapper', () => {
+
     afterEach(() => {
         vi.mocked(spawn).mockRestore();
         vi.mocked(setTimeout).mockRestore();
+        vi.mocked(rm).mockRestore();
     });
 
     it.each`
@@ -142,13 +156,13 @@ describe('Checkupdates wrapper', () => {
             ${FN_MOVABLE}       | ${join('movable', 'real.json')}      | ${join('movable', 'real.parsed.json')}
             ${FN_LOOSE_MOVABLE} | ${join('looseMovable', 'real.json')} | ${join('looseMovable', 'real.parsed.json')}
             ${FN_UPGRADABLE}    | ${join('upgradable', 'real.json')}   | ${join('upgradable', 'real.parsed.json')}
-        `('can fetch $func packages with input from $inputFile', async (params: { func: FunctionName, inputFile: string, expectedFile: string }) => {
+        `('fetches $func packages with input from $inputFile', async (params: { func: FunctionName, inputFile: string, expectedFile: string }) => {
         const input = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, params.inputFile), { encoding: 'utf-8' })) as string[];
         const expected = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, params.expectedFile), { encoding: 'utf-8' })) as string[];
 
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout).getPromise());
+        vi.mocked(setTimeout).mockReturnValue((new FakePromise).getPromise());
 
         const result = callFetch({ funcName: params.func });
 
@@ -169,7 +183,7 @@ describe('Checkupdates wrapper', () => {
             ${FN_LOOSE_MOVABLE} | ${1001}
             ${FN_UPGRADABLE}    | ${9825}
         `('throws an error if timeout resolves when calling $func', async (params: { func: FunctionName, timeout: number }) => {
-        const fakeTimeout = new FakeTimeout();
+        const fakeTimeout = new FakePromise();
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
         vi.mocked(setTimeout).mockReturnValue(fakeTimeout.getPromise());
@@ -195,7 +209,7 @@ describe('Checkupdates wrapper', () => {
         `('throws an error if child process exits with code $exit when fetching $func', async (params: { func: FunctionName, exit: number }) => {
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout()).getPromise());
+        vi.mocked(setTimeout).mockReturnValue((new FakePromise()).getPromise());
 
         const result = callFetch({ funcName: params.func });
 
@@ -216,7 +230,7 @@ describe('Checkupdates wrapper', () => {
         `('throws an error if child process writes to stderr when fetching $func', async (params: { func: FunctionName, stderr: string }) => {
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout()).getPromise());
+        vi.mocked(setTimeout).mockReturnValue((new FakePromise()).getPromise());
 
         const result = callFetch({ funcName: params.func });
 
@@ -229,13 +243,13 @@ describe('Checkupdates wrapper', () => {
     });
 
     it('retries on failure', async () => {
-        const {setTimeout: setTO} = await vi.importActual<typeof import('node:timers/promises')>('node:timers/promises');
+        const { setTimeout: setTO } = await vi.importActual<typeof import('node:timers/promises')>('node:timers/promises');
         const input = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'real.json'), { encoding: 'utf-8' })) as string[];
         const expected = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'real.parsed.json'), { encoding: 'utf-8' })) as string[];
         const errSpawn = new FakeSpawn();
         const successSpawn = new FakeSpawn();
-        const timeoutToResolve = new FakeTimeout();
-        const timeouts = [new FakeTimeout(), timeoutToResolve, new FakeTimeout()];
+        const timeoutToResolve = new FakePromise();
+        const timeouts = [new FakePromise(), timeoutToResolve, new FakePromise()];
         vi.mocked(spawn).mockReturnValueOnce(errSpawn.getProc()).mockReturnValueOnce(successSpawn.getProc());
         timeouts.forEach(ttl => vi.mocked(setTimeout).mockReturnValueOnce(ttl.getPromise()));
 
@@ -255,12 +269,12 @@ describe('Checkupdates wrapper', () => {
         expect(successSpawn.wasKilled()).toBe(false);
     });
 
-    it('can return url-compliant package names', async () => {
+    it('returns url-compliant package names', async () => {
         const input = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'noncompliant.json'), { encoding: 'utf-8' })) as string[];
         const expected = JSON.parse(await fsp.readFile(join(RESOURCE_DIR, 'upgradable', 'noncompliant.parsed.json'), { encoding: 'utf-8' })) as string[];
         const fakeSpawn = new FakeSpawn();
         vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
-        vi.mocked(setTimeout).mockReturnValue((new FakeTimeout).getPromise());
+        vi.mocked(setTimeout).mockReturnValue((new FakePromise).getPromise());
 
         const result = callFetch({ funcName: FN_UPGRADABLE, doApplyCompliance: true });
 
@@ -271,5 +285,34 @@ describe('Checkupdates wrapper', () => {
         await expect(result).resolves.toStrictEqual(expected);
         expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[FN_UPGRADABLE]]);
         expect(fakeSpawn.wasKilled()).toBe(false);
+    });
+
+    it.each`
+            rmRejects
+            ${false}
+            ${true}
+    `('removes cache if process reports it can\'t lock database', async (params: { rmRejects: boolean }) => {
+        const errMsg = 'unable to lock database';
+        const fakeSpawn = new FakeSpawn();
+        const fakeRm = new FakePromise<string>();
+        vi.mocked(spawn).mockReturnValue(fakeSpawn.getProc());
+        vi.mocked(setTimeout).mockReturnValue((new FakePromise()).getPromise());
+        vi.mocked(rm).mockReturnValue(fakeRm.getPromise());
+
+        const result = callFetch({ funcName: FN_UPGRADABLE });
+
+        fakeSpawn.emitStderr(errMsg);
+        fakeSpawn.resolvePromise(0);
+        if (params.rmRejects) {
+            fakeRm.rejectPromise('unit test');
+        }
+        else {
+            fakeRm.resolvePromise();
+        }
+
+        await expect(result).rejects.toThrow(errMsg);
+        expect(spawn).toHaveBeenCalledWith('artix-checkupdates', [FLAGS_BY_FUNCTION_NAME[FN_UPGRADABLE]]);
+        expect(fakeSpawn.wasKilled()).toBe(false);
+        expect(rm).toHaveBeenCalledWith(join(homedir(), '.cache', 'artix-checkupdates'), { "force": true, "recursive": true });
     });
 });
