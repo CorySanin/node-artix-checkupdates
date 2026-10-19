@@ -1,0 +1,298 @@
+[
+  {
+    "archRepo": "core-testing",
+    "archVersion": "5.44.0-1",
+    "artixRepo": "system-goblins",
+    "artixVersion": "5.44.0-1",
+    "basename": "perl",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.60.1-2",
+    "artixRepo": "world-goblins",
+    "artixVersion": "1.60.1-2",
+    "basename": "libguestfs",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.3.49-3",
+    "artixRepo": "world-goblins",
+    "artixVersion": "1.3.49-3",
+    "basename": "graphicsmagick",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.21-2",
+    "artixRepo": "world-goblins",
+    "artixVersion": "4.21-2",
+    "basename": "highlight",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.3.24-9",
+    "artixRepo": "world-goblins",
+    "artixVersion": "1.3.24-9",
+    "basename": "hivex",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "7.1.2.34-2",
+    "artixRepo": "world-goblins",
+    "artixVersion": "7.1.2.34-2",
+    "basename": "imagemagick",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.10.1-2",
+    "artixRepo": "world-goblins",
+    "artixVersion": "4.10.1-2",
+    "basename": "weechat",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "galaxy-goblins",
+    "artixVersion": "1-109",
+    "basename": "dummy",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.12.25-1",
+    "artixRepo": "galaxy-goblins",
+    "artixVersion": "1.12.24-1",
+    "basename": "element.io",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "system-gremlins",
+    "artixVersion": "0.6.7-1",
+    "basename": "dinit-rc",
+    "packager": "Muhammad"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "25.0.1-7",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "25.0.1-7",
+    "basename": "arrow",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.9.9-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "0.9.9-2",
+    "basename": "conduit-llnl",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.13.5-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "3.13.5-2",
+    "basename": "dart",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.9.7-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "2.9.7-2",
+    "basename": "deno",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "42.11.14-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "42.11.14-2",
+    "basename": "electron42",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.08.2-5",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "26.08.2-5.2",
+    "basename": "falkon",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "5.1.1-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "5.1.1-1",
+    "basename": "gitea-runner",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.2540.150a9d6b-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "0.2540.150a9d6b-1",
+    "basename": "gn",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.992-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "7.992-1",
+    "basename": "nmap",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:7.9.3-4",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "1:7.9.3-4",
+    "basename": "opencascade",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.1.0-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "2.1.0-2",
+    "basename": "paraview-catalyst",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.12.1-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "0.12.1-1",
+    "basename": "python-ast-serialize",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.08.2-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "26.08.2-2.2",
+    "basename": "skanpage",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.104.1-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "1.104.1-1",
+    "basename": "tailscale",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "9.5.0.6-1",
+    "basename": "artixforge",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "40.10.6-2",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "40.10.6-2",
+    "basename": "electron40",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "41.10.7-2",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "41.10.7-2",
+    "basename": "electron41",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.12.25-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "1.12.25-1.3",
+    "basename": "element.io",
+    "packager": "0xa5e6fa17"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "1:153.5.0.100b2-1",
+    "basename": "konform-browser",
+    "packager": "commandk"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "5.15.222-1",
+    "basename": "linux-lts515",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.2.11.zen1-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "7.2.10.zen1-1",
+    "basename": "linux-zen",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.16.2-3",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "0.16.2-3",
+    "basename": "neovide",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "4.0.1-1",
+    "basename": "openshot",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.9.27-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "26.7.30-1",
+    "basename": "shotcut",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "N/A",
+    "archVersion": "N/A",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "0.2.0-1",
+    "basename": "sl-artixinstall-git",
+    "packager": "Sl"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.6.1-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "2.6.0-1",
+    "basename": "tig",
+    "packager": "commandk"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20260313-56",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "20260313-41",
+    "basename": "vhba-module",
+    "packager": "Cory"
+  }
+]

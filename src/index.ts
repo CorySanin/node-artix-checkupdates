@@ -17,7 +17,7 @@ const NAMECOMPLIANCE = [
 ]
 
 export type ArtixRepo = 'system' | 'system-gremlins' | 'system-goblins' | 'world' | 'world-gremlins' | 'world-goblins' | 'galaxy' | 'galaxy-gremlins' | 'galaxy-goblins' | 'lib32' | 'lib32-gremlins' | 'lib32-goblins';
-export type ArchRepo = 'core' | 'core-testing' | 'core-staging' | 'extra' | 'extra-testing' | 'extra-staging' | 'multilib' | 'multilib-testing' | 'multilib-staging';
+export type ArchRepo = 'core' | 'core-testing' | 'core-staging' | 'extra' | 'extra-testing' | 'extra-staging' | 'multilib' | 'multilib-testing' | 'multilib-staging' | 'N/A';
 export type ValidFlag = '-u' | '-m' | '-ml' | '-a' | '-d';
 
 export interface CheckupdatesOptions {
@@ -91,7 +91,7 @@ export class Checkupdates {
         await Promise.race([setTimeout(this._timeout), process]);
         if (process.exitCode === null) {
             process.kill();
-            throw new Error(`prepare timed out after ${this._timeout}ms`);
+            throw new Error(`artix-checkupdates timed out after ${this._timeout}ms`);
         }
         else if (errorOutput.length !== 0) {
             errorOutput.includes('unable to lock database') && this.cleanUpLockfiles();

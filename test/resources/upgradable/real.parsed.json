@@ -1,0 +1,2362 @@
+[
+  {
+    "archRepo": "extra",
+    "archVersion": "1.12.25-1",
+    "artixRepo": "galaxy-goblins",
+    "artixVersion": "1.12.24-1",
+    "basename": "element.io",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "26.0.0-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "25.0.1-7",
+    "basename": "arrow",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.13.0-1",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "0.12.1-1",
+    "basename": "python-ast-serialize",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.2.11.zen1-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "7.2.10.zen1-1",
+    "basename": "linux-zen",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.9.27-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "26.7.30-1",
+    "basename": "shotcut",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.6.1-1",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "2.6.0-1",
+    "basename": "tig",
+    "packager": "commandk"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20260313-56",
+    "artixRepo": "galaxy-gremlins",
+    "artixVersion": "20260313-41",
+    "basename": "vhba-module",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "core-testing",
+    "archVersion": "1.16.2-2",
+    "artixRepo": "system",
+    "artixVersion": "1.16.2-1.1",
+    "basename": "dbus",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "core",
+    "archVersion": "262.1-1",
+    "artixRepo": "system",
+    "artixVersion": "262-1",
+    "basename": "udev",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "core-testing",
+    "archVersion": "7.3-3",
+    "artixRepo": "system",
+    "artixVersion": "7.3-1",
+    "basename": "texinfo",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "core",
+    "archVersion": "2026e-1",
+    "artixRepo": "system",
+    "artixVersion": "2026d-1",
+    "basename": "tzdata",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "16.2.0-1",
+    "artixRepo": "world",
+    "artixVersion": "16.1.0-1",
+    "basename": "aarch64-linux-gnu-gcc",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "5.0.3-2",
+    "artixRepo": "world",
+    "artixVersion": "5.0.3-1",
+    "basename": "acme-tiny",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.12.1-7",
+    "artixRepo": "world",
+    "artixVersion": "2.12.1-6",
+    "basename": "adios2",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "37.0.0.p1-1",
+    "artixRepo": "world",
+    "artixVersion": "37.0.0-5",
+    "basename": "android-tools",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.10.0-1",
+    "artixRepo": "world",
+    "artixVersion": "26.9.0-1",
+    "basename": "ansible-navigator",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.10.18-1",
+    "artixRepo": "world",
+    "artixVersion": "1.10.15-1",
+    "basename": "ant",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.4.3-3",
+    "artixRepo": "world",
+    "artixVersion": "1.4.3-1",
+    "basename": "astromenace",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:0.9rc5-2",
+    "artixRepo": "world",
+    "artixVersion": "1:0.9rc5-1",
+    "basename": "avahi",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.4.0-10",
+    "artixRepo": "world",
+    "artixVersion": "4.4.0-9.1",
+    "basename": "backuppc",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.1.2-1",
+    "artixRepo": "world",
+    "artixVersion": "1.1.1-2",
+    "basename": "bcg729",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20260912-1",
+    "artixRepo": "world",
+    "artixVersion": "20260508-1",
+    "basename": "bmake",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.3.22-1",
+    "artixRepo": "world",
+    "artixVersion": "3.3.21-2",
+    "basename": "breezy",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.11-3",
+    "artixRepo": "world",
+    "artixVersion": "1.11-2",
+    "basename": "cabextract",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "154.0.34-2",
+    "artixRepo": "world",
+    "artixVersion": "152.0.6-1",
+    "basename": "cef",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.4.8-2",
+    "artixRepo": "world",
+    "artixVersion": "1.4.8-1.1",
+    "basename": "colord",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.30.1-1",
+    "artixRepo": "world",
+    "artixVersion": "1.28-1",
+    "basename": "crun",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.28-1",
+    "artixRepo": "world",
+    "artixVersion": "0.27-5",
+    "basename": "dht",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.4.1-2",
+    "artixRepo": "world",
+    "artixVersion": "1.4.1-1",
+    "basename": "dotconf",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.41-1",
+    "artixRepo": "world",
+    "artixVersion": "4.40-1",
+    "basename": "eclipse-ecj",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "50.4-1",
+    "artixRepo": "world",
+    "artixVersion": "50.3-2",
+    "basename": "eog",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.100.1-1",
+    "artixRepo": "world",
+    "artixVersion": "4.100-1",
+    "basename": "exim",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.17.0-1",
+    "artixRepo": "world",
+    "artixVersion": "1.16.0-3",
+    "basename": "f2fs-tools",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.11.4-1",
+    "artixRepo": "world",
+    "artixVersion": "2.11.3-1",
+    "basename": "faad2",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.6.4-1",
+    "artixRepo": "world",
+    "artixVersion": "1.6.3-1.1",
+    "basename": "featherpad",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.8.0-1",
+    "artixRepo": "world",
+    "artixVersion": "1.7.0-1",
+    "basename": "flashrom",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.18.4-2",
+    "artixRepo": "world",
+    "artixVersion": "1:1.18.4-1",
+    "basename": "flatpak",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.2.10-4",
+    "artixRepo": "world",
+    "artixVersion": "3.2.10-3",
+    "basename": "freeradius",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.18-1",
+    "artixRepo": "world",
+    "artixVersion": "1.16-1",
+    "basename": "fuse-overlayfs",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.9.9-6",
+    "artixRepo": "world",
+    "artixVersion": "2.9.9-5",
+    "basename": "fuse2",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.13.3-4",
+    "artixRepo": "world",
+    "artixVersion": "3.13.3-3",
+    "basename": "gdal",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.8.2-2",
+    "artixRepo": "world",
+    "artixVersion": "2.8.2-1",
+    "basename": "geoclue",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "28.2.0-1",
+    "artixRepo": "world",
+    "artixVersion": "28.1.0-1",
+    "basename": "gitea",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.8-3",
+    "artixRepo": "world",
+    "artixVersion": "1.8-2",
+    "basename": "gnome-epub-thumbnailer",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:44.0-8",
+    "artixRepo": "world",
+    "artixVersion": "1:44.0-7",
+    "basename": "gnome-photos",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "51.0-2",
+    "artixRepo": "world",
+    "artixVersion": "51.0-1",
+    "basename": "gnome-remote-desktop",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-staging",
+    "archVersion": "10.0-1",
+    "artixRepo": "world",
+    "artixVersion": "7.2.4-1",
+    "basename": "hipblas",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.12-2",
+    "artixRepo": "world",
+    "artixVersion": "2.11-4",
+    "basename": "hostapd",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.3.2-1",
+    "artixRepo": "world",
+    "artixVersion": "4.2.6-2",
+    "basename": "iniparser",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.4.5-6",
+    "artixRepo": "world",
+    "artixVersion": "1.4.5-5",
+    "basename": "irssi",
+    "packager": "Thiago"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.44.2-2",
+    "artixRepo": "world",
+    "artixVersion": "3.44.2-1",
+    "basename": "jsonrpc-glib",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.5.0-1",
+    "artixRepo": "world",
+    "artixVersion": "2.4.1-1",
+    "basename": "kddockwidgets",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.08.2-2",
+    "artixRepo": "world",
+    "artixVersion": "26.08.2-1",
+    "basename": "kdenlive",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.49.2-1",
+    "artixRepo": "world",
+    "artixVersion": "0.48.2-1",
+    "basename": "kitty",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.8-2",
+    "artixRepo": "world",
+    "artixVersion": "0.8-1.1",
+    "basename": "knockd",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "5.2.10-2",
+    "artixRepo": "world",
+    "artixVersion": "5.2.10-1",
+    "basename": "kvirc",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.1.0-11",
+    "artixRepo": "world",
+    "artixVersion": "3.1.0-10",
+    "basename": "libbs2b",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:3.9-1",
+    "artixRepo": "world",
+    "artixVersion": "1:3.3-1",
+    "basename": "libcerf",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.44.0-3",
+    "artixRepo": "world",
+    "artixVersion": "3.44.0-2",
+    "basename": "libdazzle",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.6.0-2",
+    "artixRepo": "world",
+    "artixVersion": "1.6.0-1",
+    "basename": "libei",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.7.3-3",
+    "artixRepo": "world",
+    "artixVersion": "0.7.3-2",
+    "basename": "libgepub",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "238-4",
+    "artixRepo": "world",
+    "artixVersion": "238-3",
+    "basename": "libgudev",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.8.3-3",
+    "artixRepo": "world",
+    "artixVersion": "1.8.3-2.1",
+    "basename": "libhandy",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.0.7-1",
+    "artixRepo": "world",
+    "artixVersion": "4.0.6-1",
+    "basename": "libical",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.34.0-2",
+    "artixRepo": "world",
+    "artixVersion": "1.34.0-1",
+    "basename": "libmbim",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.24.2-2",
+    "artixRepo": "world",
+    "artixVersion": "1.24.2-1",
+    "basename": "modemmanager",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.24.4-1",
+    "artixRepo": "world",
+    "artixVersion": "1.24.3-1",
+    "basename": "libnbd",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.8.9-1",
+    "artixRepo": "world",
+    "artixVersion": "0.8.8-1",
+    "basename": "libnotify",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.4.21-1",
+    "artixRepo": "world",
+    "artixVersion": "0.4.18-1.1",
+    "basename": "libp11",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.6.76-11",
+    "artixRepo": "world",
+    "artixVersion": "0.6.76-10",
+    "basename": "libpst",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "17.0+r134+g77d25a1e6-1",
+    "artixRepo": "world",
+    "artixVersion": "17.0+r98+gb096704c0-1",
+    "basename": "pulseaudio",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.38.0-2",
+    "artixRepo": "world",
+    "artixVersion": "1.38.0-1",
+    "basename": "libqmi",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.4.0-2",
+    "artixRepo": "world",
+    "artixVersion": "1.4.0-1",
+    "basename": "libqrtr-glib",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.10.2-2",
+    "artixRepo": "world",
+    "artixVersion": "0.10.2-1",
+    "basename": "librest",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.4.10-2",
+    "artixRepo": "world",
+    "artixVersion": "0.4.10-1",
+    "basename": "libspelling",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.2.17-1",
+    "artixRepo": "world",
+    "artixVersion": "0.2.16-1",
+    "basename": "libwmf",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.8.14-1",
+    "artixRepo": "world",
+    "artixVersion": "1.8.13-2",
+    "basename": "libx11",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.8.4-1",
+    "artixRepo": "world",
+    "artixVersion": "1.8.3-1",
+    "basename": "libxi",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.2.13-2",
+    "artixRepo": "world",
+    "artixVersion": "0.2.13-1",
+    "basename": "libxisf",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.5.20-1",
+    "artixRepo": "world",
+    "artixVersion": "3.5.19-1",
+    "basename": "libxpm",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.9.13-1",
+    "artixRepo": "world",
+    "artixVersion": "0.9.12-1",
+    "basename": "libxrender",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.2.6-1",
+    "artixRepo": "world",
+    "artixVersion": "1.2.5-1",
+    "basename": "libxtst",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20260907-1",
+    "artixRepo": "world",
+    "artixVersion": "20250912-1",
+    "basename": "luit",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.8.7-1",
+    "artixRepo": "world",
+    "artixVersion": "1.8.6-1",
+    "basename": "m17n-lib",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.3.1-2",
+    "artixRepo": "world",
+    "artixVersion": "0.3.1-1",
+    "basename": "marisa",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "16.4.1-1",
+    "artixRepo": "world",
+    "artixVersion": "16.4.0-1",
+    "basename": "marked",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.163.0-2",
+    "artixRepo": "world",
+    "artixVersion": "1.162.0-1.1",
+    "basename": "matrix-synapse",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.0.9-1",
+    "artixRepo": "world",
+    "artixVersion": "1.0.8-1",
+    "basename": "ndisc6",
+    "packager": "Artix"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "5.9.5.2-2",
+    "artixRepo": "world",
+    "artixVersion": "5.9.5.2-1",
+    "basename": "net-snmp",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.12.5-2",
+    "artixRepo": "world",
+    "artixVersion": "1.12.5-1",
+    "basename": "networkmanager-openvpn",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.30.6-2",
+    "artixRepo": "world",
+    "artixVersion": "1.30.5-1",
+    "basename": "nginx",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.30.6-1",
+    "artixRepo": "world",
+    "artixVersion": "1.30.5-1",
+    "basename": "nginx",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "26.12.0-1",
+    "artixRepo": "world",
+    "artixVersion": "26.11.1-1",
+    "basename": "nodejs",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20.20.2-1",
+    "artixRepo": "world",
+    "artixVersion": "20.19.6-1",
+    "basename": "nodejs-lts-iron",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "22.23.3-2",
+    "artixRepo": "world",
+    "artixVersion": "22.23.3-1",
+    "basename": "nodejs-lts-jod",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "24.22.0-1",
+    "artixRepo": "world",
+    "artixVersion": "24.21.0-2",
+    "basename": "nodejs-lts-krypton",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "12.2.1-1",
+    "artixRepo": "world",
+    "artixVersion": "12.2.0-1",
+    "basename": "npm",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.15.3-1",
+    "artixRepo": "world",
+    "artixVersion": "4.12.0-1",
+    "basename": "nsd",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.15.1-3",
+    "artixRepo": "world",
+    "artixVersion": "0.15.1-2",
+    "basename": "nss-mdns",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.0.37-4",
+    "artixRepo": "world",
+    "artixVersion": "2.0.37-3",
+    "basename": "openipmi",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "5.0.11-1",
+    "artixRepo": "world",
+    "artixVersion": "5.0.10-2",
+    "basename": "openmpi",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.9p1-1",
+    "artixRepo": "world",
+    "artixVersion": "6.8p1-10",
+    "basename": "openntpd",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.20.1-3",
+    "artixRepo": "world",
+    "artixVersion": "1.20.0-3",
+    "basename": "openucx",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.2.2-1",
+    "artixRepo": "world",
+    "artixVersion": "1.2.0-3",
+    "basename": "osm-gps-map",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:6.31.0-1",
+    "artixRepo": "world",
+    "artixVersion": "1:6.30.0-1",
+    "basename": "oxygen-icons",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.2-4",
+    "artixRepo": "world",
+    "artixVersion": "1.2-3",
+    "basename": "paprefs",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20260922-1",
+    "artixRepo": "world",
+    "artixVersion": "20260722-1",
+    "basename": "parallel",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:6.2-2",
+    "artixRepo": "world",
+    "artixVersion": "1:6.2-1",
+    "basename": "pavucontrol",
+    "packager": "Thiago"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.5.3-1",
+    "artixRepo": "world",
+    "artixVersion": "2.5.2-1",
+    "basename": "pcsclite",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.7200-9",
+    "artixRepo": "world",
+    "artixVersion": "2.7200-8",
+    "basename": "perl-acme-alien-dontpanic",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.10-4",
+    "artixRepo": "world",
+    "artixVersion": "0.10-3",
+    "basename": "perl-alien-cmake3",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.20-6",
+    "artixRepo": "world",
+    "artixVersion": "0.20-5",
+    "basename": "perl-alien-libxml2",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.007-6",
+    "artixRepo": "world",
+    "artixVersion": "0.007-5",
+    "basename": "perl-b-cow",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.67-2",
+    "artixRepo": "world",
+    "artixVersion": "0.67-1",
+    "basename": "perl-berkeleydb",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.10-15",
+    "artixRepo": "world",
+    "artixVersion": "0.10-14",
+    "basename": "perl-class-load-xs",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.19-2",
+    "artixRepo": "world",
+    "artixVersion": "1.19-1",
+    "basename": "perl-class-xsaccessor",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.51-2",
+    "artixRepo": "world",
+    "artixVersion": "0.51-1",
+    "basename": "perl-clone",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.75-12",
+    "artixRepo": "world",
+    "artixVersion": "3.75-11",
+    "basename": "perl-common-sense",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.09-13",
+    "artixRepo": "world",
+    "artixVersion": "0.09-12",
+    "basename": "perl-crypt-openssl-bignum",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.20-9",
+    "artixRepo": "world",
+    "artixVersion": "0.20-8",
+    "basename": "perl-crypt-openssl-dsa",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.17-4",
+    "artixRepo": "world",
+    "artixVersion": "0.17-3",
+    "basename": "perl-crypt-openssl-random",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.41-2",
+    "artixRepo": "world",
+    "artixVersion": "0.41-1",
+    "basename": "perl-crypt-openssl-rsa",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.091-2",
+    "artixRepo": "world",
+    "artixVersion": "0.091-1",
+    "basename": "perl-cryptx",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.67-2",
+    "artixRepo": "world",
+    "artixVersion": "1.67-1",
+    "basename": "perl-datetime",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.055-2",
+    "artixRepo": "world",
+    "artixVersion": "4.055-1",
+    "basename": "perl-dbd-mysql",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.656-2",
+    "artixRepo": "world",
+    "artixVersion": "1.655-1",
+    "basename": "perl-dbi",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.656-1",
+    "artixRepo": "world",
+    "artixVersion": "1.655-1",
+    "basename": "perl-dbi",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.06-27",
+    "artixRepo": "world",
+    "artixVersion": "0.06-26",
+    "basename": "perl-digest-nilsimsa",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.13-23",
+    "artixRepo": "world",
+    "artixVersion": "2.13-22",
+    "basename": "perl-digest-sha1",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.82-7",
+    "artixRepo": "world",
+    "artixVersion": "0.82-6",
+    "basename": "perl-fcgi",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.22-4",
+    "artixRepo": "world",
+    "artixVersion": "0.22-3",
+    "basename": "perl-file-fcntllock",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.91-2",
+    "artixRepo": "world",
+    "artixVersion": "2.91-1",
+    "basename": "perl-gd",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.86-2",
+    "artixRepo": "world",
+    "artixVersion": "3.86-1",
+    "basename": "perl-html-parser",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1:0.022-2",
+    "artixRepo": "world",
+    "artixVersion": "1:0.022-1",
+    "basename": "perl-io-compress-brotli",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.05-21",
+    "artixRepo": "world",
+    "artixVersion": "0.05-20",
+    "basename": "perl-io-dirent",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.31-2",
+    "artixRepo": "world",
+    "artixVersion": "1.31-1",
+    "basename": "perl-io-tty",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.04-2",
+    "artixRepo": "world",
+    "artixVersion": "4.04-1",
+    "basename": "perl-json-xs",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.37-2",
+    "artixRepo": "world",
+    "artixVersion": "1.37-1",
+    "basename": "perl-libintl-perl",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.430-8",
+    "artixRepo": "world",
+    "artixVersion": "0.430-7",
+    "basename": "perl-list-moreutils-xs",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.07-17",
+    "artixRepo": "world",
+    "artixVersion": "1.07-16",
+    "basename": "perl-locale-gettext",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.4001-2",
+    "artixRepo": "world",
+    "artixVersion": "2.4001-1",
+    "basename": "perl-moose",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.6.2-2",
+    "artixRepo": "world",
+    "artixVersion": "2.6.2-1",
+    "basename": "perl-mouse",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.28-2",
+    "artixRepo": "world",
+    "artixVersion": "1.28-1",
+    "basename": "perl-net-dns-sec",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.02-6",
+    "artixRepo": "world",
+    "artixVersion": "1.02-5",
+    "basename": "perl-net-libidn2",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.96-2",
+    "artixRepo": "world",
+    "artixVersion": "1.96-1",
+    "basename": "perl-net-ssleay",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.079-18",
+    "artixRepo": "world",
+    "artixVersion": "4.079-17",
+    "basename": "perl-netaddr-ip",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.30-6",
+    "artixRepo": "world",
+    "artixVersion": "0.30-5",
+    "basename": "perl-package-stash-xs",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.5-8",
+    "artixRepo": "world",
+    "artixVersion": "2.5-7",
+    "basename": "perl-padwalker",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.12-2",
+    "artixRepo": "world",
+    "artixVersion": "1.12-1",
+    "basename": "perl-params-someutil",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.102-8",
+    "artixRepo": "world",
+    "artixVersion": "1.102-7",
+    "basename": "perl-params-util",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.31-6",
+    "artixRepo": "world",
+    "artixVersion": "1.31-5",
+    "basename": "perl-params-validate",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.117-6",
+    "artixRepo": "world",
+    "artixVersion": "0.117-5",
+    "basename": "perl-ref-util-xs",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.70-2",
+    "artixRepo": "world",
+    "artixVersion": "1.70-1",
+    "basename": "perl-scalar-list-utils",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.36-1",
+    "artixRepo": "world",
+    "artixVersion": "0.35-1",
+    "basename": "perl-shell-config-generate",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.29-12",
+    "artixRepo": "world",
+    "artixVersion": "0.29-11",
+    "basename": "perl-socket6",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.100-6",
+    "artixRepo": "world",
+    "artixVersion": "2.100-5",
+    "basename": "perl-string-crc32",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.14-15",
+    "artixRepo": "world",
+    "artixVersion": "0.14-14",
+    "basename": "perl-sub-identify",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.28-3",
+    "artixRepo": "world",
+    "artixVersion": "0.28-2",
+    "basename": "perl-sub-name",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.03-4",
+    "artixRepo": "world",
+    "artixVersion": "0.03-3",
+    "basename": "perl-sub-prototype",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.106-2",
+    "artixRepo": "world",
+    "artixVersion": "3.106-1",
+    "basename": "perl-template-toolkit",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.38-12",
+    "artixRepo": "world",
+    "artixVersion": "2.38-11",
+    "basename": "perl-term-readkey",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.47-3",
+    "artixRepo": "world",
+    "artixVersion": "1.47-2",
+    "basename": "perl-term-readline-gnu",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.17-8",
+    "artixRepo": "world",
+    "artixVersion": "0.17-7",
+    "basename": "perl-test-leaktrace",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.91-3",
+    "artixRepo": "world",
+    "artixVersion": "0.91-2",
+    "basename": "perl-text-bibtex",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.04-26",
+    "artixRepo": "world",
+    "artixVersion": "0.04-25",
+    "basename": "perl-text-charwidth",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2019.001-10",
+    "artixRepo": "world",
+    "artixVersion": "2019.001-9",
+    "basename": "perl-unicode-linebreak",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.65-2",
+    "artixRepo": "world",
+    "artixVersion": "0.65-1",
+    "basename": "perl-variable-magic",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.0213-2",
+    "artixRepo": "world",
+    "artixVersion": "2.0213-1",
+    "basename": "perl-xml-libxml",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.59-2",
+    "artixRepo": "world",
+    "artixVersion": "2.59-1",
+    "basename": "perl-xml-parser",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.910.0-2",
+    "artixRepo": "world",
+    "artixVersion": "0.910.0-1",
+    "basename": "perl-yaml-libyaml",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.43.0-1",
+    "artixRepo": "world",
+    "artixVersion": "0.41.0-1",
+    "basename": "perl-yaml-pp",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "6.8-1",
+    "artixRepo": "world",
+    "artixVersion": "6.7-2",
+    "basename": "plasma-meta",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "6.8.0-1",
+    "artixRepo": "world",
+    "artixVersion": "6.7.5-1",
+    "basename": "plasma-workspace-wallpapers",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "128-1",
+    "artixRepo": "world",
+    "artixVersion": "127-3.1",
+    "basename": "polkit",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "18.6-4",
+    "artixRepo": "world",
+    "artixVersion": "18.6-2",
+    "basename": "postgresql",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "17.11-3",
+    "artixRepo": "world",
+    "artixVersion": "17.11-2",
+    "basename": "postgresql-old-upgrade",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.2.0-1",
+    "artixRepo": "world",
+    "artixVersion": "4.1.0-1",
+    "basename": "privoxy",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "9.9.0-1",
+    "artixRepo": "world",
+    "artixVersion": "9.8.1-1",
+    "basename": "proj",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.20.1-1",
+    "artixRepo": "world",
+    "artixVersion": "1.20.0-1",
+    "basename": "pyqt-builder",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.14.5-1",
+    "artixRepo": "world",
+    "artixVersion": "3.14.3-1",
+    "basename": "python-aiohttp",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.5.29-1",
+    "artixRepo": "world",
+    "artixVersion": "1.5.28-1",
+    "basename": "python-blockbuster",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "40.42.0-1",
+    "artixRepo": "world",
+    "artixVersion": "40.41.0-1",
+    "basename": "python-faker",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.146.0-1",
+    "artixRepo": "world",
+    "artixVersion": "0.141.1-1",
+    "basename": "python-fastapi",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.7.3-3",
+    "artixRepo": "world",
+    "artixVersion": "0.7.3-2",
+    "basename": "python-loguru",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "5.2.4-1",
+    "artixRepo": "world",
+    "artixVersion": "5.2.3-1",
+    "basename": "python-moto",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.1.4-1",
+    "artixRepo": "world",
+    "artixVersion": "1.1.3-1",
+    "basename": "python-py7zr",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "26.0.0-1",
+    "artixRepo": "world",
+    "artixVersion": "25.0.1-1",
+    "basename": "python-pyarrow",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.14.9-1",
+    "artixRepo": "world",
+    "artixVersion": "0.14.8-1",
+    "basename": "python-pycrdt",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.0.0-1",
+    "artixRepo": "world",
+    "artixVersion": "3.24.1-1",
+    "basename": "python-pycryptodome",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.28-8",
+    "artixRepo": "world",
+    "artixVersion": "0.28-7",
+    "basename": "pyxdg",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.7.2-1",
+    "artixRepo": "world",
+    "artixVersion": "1.7.0-5",
+    "basename": "python-texttable",
+    "packager": "Dovloran"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.36.0-1",
+    "artixRepo": "world",
+    "artixVersion": "0.35.0-1",
+    "basename": "python-validators",
+    "packager": "LemonPie"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.3-1",
+    "artixRepo": "world",
+    "artixVersion": "1.2-1",
+    "basename": "qbe",
+    "packager": "Artix"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.8.3-1",
+    "artixRepo": "world",
+    "artixVersion": "3.8.1-1",
+    "basename": "radicale",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.88-2",
+    "artixRepo": "world",
+    "artixVersion": "2.88-1",
+    "basename": "razor",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.4.43-4",
+    "artixRepo": "world",
+    "artixVersion": "1:1.4.43-3",
+    "basename": "remmina",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.12.0-8",
+    "artixRepo": "world",
+    "artixVersion": "0.12.0-7.1",
+    "basename": "renameutils",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.11.0-2",
+    "artixRepo": "world",
+    "artixVersion": "1.11.0-1",
+    "basename": "rrdtool",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.2.2-1",
+    "artixRepo": "world",
+    "artixVersion": "4.2.1-1",
+    "basename": "rspamd",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.5.1-3",
+    "artixRepo": "world",
+    "artixVersion": "3.5.1-2",
+    "basename": "rsync",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.14-2",
+    "artixRepo": "world",
+    "artixVersion": "0.14-1",
+    "basename": "rtkit",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "9.31-10",
+    "artixRepo": "world",
+    "artixVersion": "9.31-9",
+    "basename": "rxvt-unicode",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "5.0.2-2",
+    "artixRepo": "world",
+    "artixVersion": "5.0.1-3",
+    "basename": "screen",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:47.0.1-7",
+    "artixRepo": "world",
+    "artixVersion": "1:47.0.1-6",
+    "basename": "seahorse",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.5-2",
+    "artixRepo": "world",
+    "artixVersion": "7.5-1.1",
+    "basename": "smartmontools",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.0.2-3",
+    "artixRepo": "world",
+    "artixVersion": "4.0.2-2",
+    "basename": "spamassassin",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.2.1-3",
+    "artixRepo": "world",
+    "artixVersion": "1.2.1-2",
+    "basename": "speex",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.2.1-3",
+    "artixRepo": "world",
+    "artixVersion": "1.2.1-2",
+    "basename": "speexdsp",
+    "packager": "Thiago"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.18.0-1",
+    "artixRepo": "world",
+    "artixVersion": "4.14.0-1",
+    "basename": "sqlcipher",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.6.0-1",
+    "artixRepo": "world",
+    "artixVersion": "2.5.1-1",
+    "basename": "sshguard",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20260415.205329.g31c1ad374564-1",
+    "artixRepo": "world",
+    "artixVersion": "r2216.f1c79c0-1",
+    "basename": "stb",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.14.5-6",
+    "artixRepo": "world",
+    "artixVersion": "1.14.5-5",
+    "basename": "subversion",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.0-2",
+    "artixRepo": "world",
+    "artixVersion": "3.0-1",
+    "basename": "switcheroo-control",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "12.8.0-1",
+    "artixRepo": "world",
+    "artixVersion": "12.7.9-1",
+    "basename": "sysstat",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.4.0-1",
+    "artixRepo": "world",
+    "artixVersion": "3.3.2-2",
+    "basename": "sz",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.40.0-2",
+    "artixRepo": "world",
+    "artixVersion": "3.40.0-1",
+    "basename": "template-glib",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.0.23-8",
+    "artixRepo": "world",
+    "artixVersion": "1.0.23-7",
+    "basename": "tinyprog",
+    "packager": "Artoo"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.1.0-1",
+    "artixRepo": "world",
+    "artixVersion": "3.0.0-2",
+    "basename": "tpm2-abrmd",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.11.0-2",
+    "artixRepo": "world",
+    "artixVersion": "0.11.0-1",
+    "basename": "uhttpmock",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.1.4-1",
+    "artixRepo": "world",
+    "artixVersion": "2.1.2-1",
+    "basename": "unibilium",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.2.1-1",
+    "artixRepo": "world",
+    "artixVersion": "4.2.0-1",
+    "basename": "utf8cpp",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.9.1-11",
+    "artixRepo": "world",
+    "artixVersion": "0.9.1-10",
+    "basename": "vimiv",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.0.5-2",
+    "artixRepo": "world",
+    "artixVersion": "3.0.5-1",
+    "basename": "vsftpd",
+    "packager": "Artix"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.4.363-1",
+    "artixRepo": "world",
+    "artixVersion": "1:1.4.357-1",
+    "basename": "vulkan-docs",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "8.10-1",
+    "artixRepo": "world",
+    "artixVersion": "8.5-2",
+    "basename": "wcslib",
+    "packager": "nikolar"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.3.1-7",
+    "artixRepo": "world",
+    "artixVersion": "0.3.1-6",
+    "basename": "webrtc-audio-processing-0.3",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.3-6",
+    "artixRepo": "world",
+    "artixVersion": "1.3-5",
+    "basename": "webrtc-audio-processing-1",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.7.4-1",
+    "artixRepo": "world",
+    "artixVersion": "4.7.3-1",
+    "basename": "wireshark",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.63.0-1",
+    "artixRepo": "world",
+    "artixVersion": "0.62.0-1",
+    "basename": "wit-bindgen",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.0.2-7",
+    "artixRepo": "world",
+    "artixVersion": "1.0.2-6",
+    "basename": "woff2",
+    "packager": "Nathan"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.15.3-2",
+    "artixRepo": "world",
+    "artixVersion": "1.15.3-1",
+    "basename": "xdg-desktop-portal-gtk",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.9.7-4",
+    "artixRepo": "world",
+    "artixVersion": "0.9.7-3",
+    "basename": "xmms2",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "21.1.25-2",
+    "artixRepo": "world",
+    "artixVersion": "21.1.25-1.1",
+    "basename": "xorg-server",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.23.95-1",
+    "artixRepo": "world",
+    "artixVersion": "0.23.93-7",
+    "basename": "zbar",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.28.1-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.25.0-1",
+    "basename": "anubis",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.2.1-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.2.0-1",
+    "basename": "autotiling-rs",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "6.0.6-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "6.0.5-1",
+    "basename": "bleachbit",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.109-7",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.109-6.1",
+    "basename": "cairo-perl",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "9.14.0-5",
+    "artixRepo": "galaxy",
+    "artixVersion": "8.7.0-12",
+    "basename": "calibre",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-app-library",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-applets",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-bg",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-comp",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-files",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.1-1",
+    "basename": "cosmic-greeter",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-icon-theme",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-idle",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-initial-setup",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-launcher",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-monitor",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-notifications",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-osd",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.9.0-1",
+    "basename": "cosmic-osk",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-panel",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-player",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-randr",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-screenshot",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-session",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-settings",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-settings-daemon",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.9.0-1",
+    "basename": "cosmic-sound-theme",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-store",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-terminal",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "cosmic-text-editor",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.9.0-1",
+    "basename": "cosmic-viewer",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "2:1.9.0-1",
+    "basename": "cosmic-wallpapers",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "2:1.9.0-1",
+    "basename": "cosmic-workspaces",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:44-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:42-1",
+    "basename": "electron",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "39.8.10-3",
+    "artixRepo": "galaxy",
+    "artixVersion": "39.8.10-2",
+    "basename": "electron39",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.28.2-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.28.0-1",
+    "basename": "esbuild",
+    "packager": "aartoni"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.329.4-4",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.329.4-3.1",
+    "basename": "glib-perl",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.168.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.164.0-1",
+    "basename": "hugo",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.6-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "2.5-1.1",
+    "basename": "intel-gpu-tools",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.59.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.58.0-1",
+    "basename": "just",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.52.16-3",
+    "artixRepo": "galaxy",
+    "artixVersion": "3.52.16-2",
+    "basename": "libiodbc",
+    "packager": "Carlo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.2.10.hardened1-3",
+    "artixRepo": "galaxy",
+    "artixVersion": "7.2.10.hardened1-1",
+    "basename": "linux-hardened",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "7.2.11.rt3.arch1-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "7.2.9.rt3.artix1-1",
+    "basename": "linux-rt",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "6.18.57.rt7.arch1-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "6.18.55.rt6.artix1-1",
+    "basename": "linux-rt-lts",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.28.1-3",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.28.1-2",
+    "basename": "mate-applets",
+    "packager": "Thiago"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.27.0-4",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.27.0-3",
+    "basename": "mate-netbook",
+    "packager": "Thiago"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.24.16-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.24.15-4",
+    "basename": "mpd",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.005-6",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.005-5.1",
+    "basename": "perl-cairo-gobject",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "2.09-2",
+    "artixRepo": "galaxy",
+    "artixVersion": "2.09-1",
+    "basename": "perl-crypt-des",
+    "packager": "0xa5e6fa17"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.46-2",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.46-1",
+    "basename": "perl-curses",
+    "packager": "arc-d3v"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "0.052-2",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.052-1",
+    "basename": "perl-glib-object-introspection",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "1.7-27",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.7-26",
+    "basename": "perl-text-iconv",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "3.05-15",
+    "artixRepo": "galaxy",
+    "artixVersion": "3.05-14",
+    "basename": "perl-text-soundex",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:0.19.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:0.18.2-2",
+    "basename": "profanity",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.08-4",
+    "artixRepo": "galaxy",
+    "artixVersion": "2.08-3",
+    "basename": "pwgen",
+    "packager": "Carlo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.4.2-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "2.4.1-1",
+    "basename": "qmmp",
+    "packager": "capezotte"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.5.28-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.5.27-1",
+    "basename": "rio",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "2.1.3-11",
+    "artixRepo": "galaxy",
+    "artixVersion": "2.1.3-10.1",
+    "basename": "speedtest-cli",
+    "packager": "commandk"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:1.10.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1:1.9.0-1",
+    "basename": "xdg-desktop-portal-cosmic",
+    "packager": "marzosh"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "3.4.4-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.4.1-3",
+    "basename": "xviewer-plugins",
+    "packager": "Carlo"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.17-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.16-1",
+    "basename": "zutty",
+    "packager": "Unknown"
+  }
+]

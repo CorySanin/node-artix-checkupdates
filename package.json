@@ -33,7 +33,7 @@
     "distribution"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && rm -rf distribution/test",
     "clean": "rm -rf ./distribution",
     "watch": "tsc -w",
     "test": "vitest"

@@ -1,0 +1,146 @@
+[
+  {
+    "archRepo": "extra-testing",
+    "archVersion": "4.1.8-2",
+    "artixRepo": "world-gremlins",
+    "artixVersion": "5.0.2-1",
+    "basename": "apparmor",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "core",
+    "archVersion": "3-3",
+    "artixRepo": "system",
+    "artixVersion": "3-6.5",
+    "basename": "base",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "core",
+    "archVersion": "2025.10.12-1",
+    "artixRepo": "system",
+    "artixVersion": "2026.09.10-1",
+    "basename": "filesystem",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "core",
+    "archVersion": "3.0.0-1",
+    "artixRepo": "system",
+    "artixVersion": "3.0.1-1",
+    "basename": "libassuan",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "core",
+    "archVersion": "4.20.0.arch1-1",
+    "artixRepo": "system",
+    "artixVersion": "4.20.0.artix1-1",
+    "basename": "shadow",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20251001-2",
+    "artixRepo": "world",
+    "artixVersion": "20251001-3",
+    "basename": "aspell-pt",
+    "packager": "Dovloran"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20251101-1",
+    "artixRepo": "world",
+    "artixVersion": "20260201-1",
+    "basename": "hunspell-pl",
+    "packager": "nous"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.8.90-6",
+    "artixRepo": "world",
+    "artixVersion": "0.8.90-7",
+    "basename": "icon-naming-utils",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "4.13.2-2",
+    "artixRepo": "world",
+    "artixVersion": "4.13.2-3",
+    "basename": "junit",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:9.0.41-1",
+    "artixRepo": "world",
+    "artixVersion": "2:9.0.38-1",
+    "basename": "libphonenumber",
+    "packager": "Dudemanguy"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.4.4-1",
+    "artixRepo": "world",
+    "artixVersion": "1.4.4-2.2",
+    "basename": "mkdocs-autorefs",
+    "packager": "Dovloran"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.19-4",
+    "artixRepo": "world",
+    "artixVersion": "0.19-5",
+    "basename": "pacrunner",
+    "packager": "kenobi"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1:2.10-1",
+    "artixRepo": "world",
+    "artixVersion": "1:2.10-2.2",
+    "basename": "vamp-plugin-sdk",
+    "packager": "Dovloran"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.22.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.22.0-2",
+    "basename": "aerc",
+    "packager": "Cory"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.6.0-3",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.6.7-1",
+    "basename": "ephoto",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "0.6.4-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "0.6.6-1",
+    "basename": "evisum",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "1.14.0-1",
+    "artixRepo": "galaxy",
+    "artixVersion": "1.14.2-1.1",
+    "basename": "terminology",
+    "packager": "artist"
+  },
+  {
+    "archRepo": "extra",
+    "archVersion": "20240203.110809.5046fc22.r869.g76b606ec5-3",
+    "artixRepo": "galaxy",
+    "artixVersion": "20240922.151228.2b76c63b-1",
+    "basename": "wezterm",
+    "packager": "artist"
+  }
+]
