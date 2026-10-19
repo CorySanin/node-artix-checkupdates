@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { Checkupdates, applyCompliance } from '../src/index.js';
-
+import { applyCompliance } from '../src/index.js';
 
 describe('applyCompliance() function', () => {
     it.each`
